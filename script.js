@@ -252,6 +252,10 @@ function showSignup() {
     document.getElementById("signupBtn").classList.add("active");
     document.getElementById("loginBtn").classList.remove("active");
 }
+function logingup(){
+    alert("Logged-In Successfully!");
+}
+
 function signingUp() {
     let pass = document.getElementById("signupPass").value;
     let rePass = document.getElementById("signupRePass").value;
@@ -264,4 +268,5 @@ function signingUp() {
         return true; // allow form submission
     }
 }
+
 
