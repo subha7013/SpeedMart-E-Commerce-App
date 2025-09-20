@@ -381,5 +381,8 @@ footer {
     justify-content: center;
     align-items: center;
     background: linear-gradient(rgb(223, 217, 217), rgb(156, 252, 156));
-    width: 30rem;
+    width: 250px;
+    position: relative;
+    left: 10%;
 }
+
