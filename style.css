@@ -118,6 +118,7 @@ main {
             0 0 60px rgba(255, 174, 0, 0.5);
     }
 }
+
 .sn:hover {
     background-color: white;
     color: orangered;
@@ -140,6 +141,7 @@ main {
     border-radius: 8px;
     margin-bottom: 5px;
 }
+
 #wishlistPage button {
     margin-top: 15px;
     padding: 10px 20px;
@@ -215,9 +217,6 @@ main {
     font-size: 14px;
     cursor: pointer;
     transform: scale(1.05);
-
-
-
 }
 
 #cartPage {
@@ -256,9 +255,10 @@ footer {
 /*for mobiles*/
 
 @media (max-width: 768px) {
-    body{
+    body {
         padding: 25px;
     }
+
     nav {
         width: 100%;
         display: flex;
@@ -268,9 +268,10 @@ footer {
         top: 0;
         left: 0;
         z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         background-color: orangered;
     }
+
     nav .logo img {
         height: 300px;
     }
@@ -282,56 +283,103 @@ footer {
         bottom: 0;
         left: 0;
         background: #44e74f;
-        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
     }
-    nav ul li:hover{
-        color:#fff;
+
+    nav ul li:hover {
+        color: #fff;
         transform: scale(1.2);
     }
+
     nav .options ul {
         display: flex;
-        justify-content: space-around; 
+        justify-content: space-around;
         padding: 10px 0;
-        flex-wrap: nowrap; 
+        flex-wrap: nowrap;
     }
-    
+
     nav .options ul li {
-        flex: 1;  */
-        display: flex;
+        flex: 1;
+        */ display: flex;
         flex-direction: column;
         align-items: center;
         font-size: 12px;
         cursor: pointer;
         padding: 10px;
-        min-width: 0; 
+        min-width: 0;
     }
-    
+
 
     /* Push content between top & bottom bars */
     main {
-        padding-top: 100px;  
+        padding-top: 100px;
         padding-bottom: 70px;
     }
-    #productsList{
+
+    #productsList {
         padding: 10px 10px;
         display:
     }
-    .home img{
+
+    .home img {
         width: 100%;
         height: 62vh;
     }
-    .home button{
+
+    .home button {
         padding: 10px 10px;
         font-size: 15px;
     }
+
     footer {
         width: 100%;
-        position: relative; 
-        bottom: 0;  
+        position: relative;
+        bottom: 0;
         margin-bottom: 60px;
         text-align: center;
     }
+}
 
-    
+#profilePage button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #f44336;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    margin: 5px;
+}
+
+#profilePage button:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
+
+#profilePage button.active {
+    background: #b71c1c;
+    transform: scale(1.1);
+}
+
+#signupForm span {
+    color: #555;
+    transition: 0.3s;
+}
+
+#signupForm span:hover {
+    color: #000;
+    transform: scale(1.2);
+}
+
+
+.log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(223, 217, 217), rgb(156, 252, 156));
+    width: 30rem;
 }
