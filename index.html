@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedMart: Get your products delivered in minutes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/svgs/logo.svg" alt="SpeedMart Logo">
+            </div>
+            <div class="options">
+                <ul>
+                    <li onclick="showHome()"><img src="/svgs/home.svg" alt="" onclick="showHome()">Home</li>
+                    <li onclick="showCategories()"><img src="/svgs/category.svg" alt="">Categories</li>
+                    <li onclick="showWishlist()"><img src="/svgs/wish.svg" alt=""> Wishlist</li>
+                    <li onclick="showCart()"><img src="/svgs/cart.svg" alt=""> Cart</li>
+                    <li><img src="/svgs/profile.svg" alt=""> Profile</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+            <!--Home-->
+            <section class="home" id="home">
+                <img src="/banner.jpg" alt="">
+                <button class="sn" onclick="showCategories()">Shop Now</button>
+            </section>
+
+            <!-- Categories page-->
+            <div class="category">
+                <section id="categoriesPage" style="display:none;">
+                    <h2>Categories</h2>
+                    <div id="categoriesList"></div>
+                </section>    
+
+            </div>
+            
+            <!-- Products page-->
+            <section id="productsPage" style="display:none;">
+                <button class="back" onclick="backToCategories()">← Back</button>
+                <h2 id="categoryTitle"></h2>
+                <div id="productsList"></div>
+            </section>
+
+            <!-- Wishlist Page -->
+            <section id="wishlistPage" style="display:none;">
+                <h2>Your Wishlist</h2>
+                <div id="wishlistList"></div>
+                <button id="clearWishlistBtn" onclick="clearWishlist()">Clear Wishlist</button>
+            </section>
+            
+            <!-- Cart Page -->
+            <section id="cartPage" style="display:none;">
+                <h2>Your Cart</h2>
+                <div id="cartList"></div>
+                <h3 id="cartTotal">Total: Rs 0</h3>
+                <button onclick="placeOrder()">Checkout</button>
+            </section>
+    </main>
+    <footer id="footer">
+        <b>©Subhasish — SpeedMart || Made with ❤️ || 2025</b>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
