@@ -61,6 +61,7 @@ function showHome() {
     document.getElementById('wishlistPage').style.display='none';
     document.getElementById('cartPage').style.display='none';
     document.getElementById('footer').style.display='flex';
+    document.getElementById('profilePage').style.display='none';
 }
 
 // Show Categories
@@ -215,5 +216,52 @@ function placeOrder() {
     // Clear the cart after order
     cart = [];
     showCart();
+}
+
+function showProfile(){
+    showSection('profilePage');
+    document.getElementById('footer').style.display='none';
+    document.getElementById('login').style.padding='20px 20px';
+    document.getElementById('signup').style.padding='20px 20px';
+
+}
+function showProf(){
+    showSection('profilePage');
+    document.getElementById('loginForm').style.display='none';
+    document.getElementById('signupForm').style.display='none';
+    document.getElementById('footer').style.display='none';
+    document.getElementById('loginBtn').style.display='block';
+    document.getElementById('signupBtn').style.display='block';
+}
+function showLogin() {
+    document.getElementById("loginForm").style.display = "block";
+    document.getElementById("signupForm").style.display = "none";
+    document.getElementById('loginBtn').style.display='none';
+    document.getElementById('signupBtn').style.display='none';
+    // Highlight active button
+    document.getElementById("loginBtn").classList.add("active");
+    document.getElementById("signupBtn").classList.remove("active");
+}
+
+function showSignup() {
+    document.getElementById("signupForm").style.display = "block";
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById('loginBtn').style.display='none';
+    document.getElementById('signupBtn').style.display='none';
+    // Highlight active button
+    document.getElementById("signupBtn").classList.add("active");
+    document.getElementById("loginBtn").classList.remove("active");
+}
+function signingUp() {
+    let pass = document.getElementById("signupPass").value;
+    let rePass = document.getElementById("signupRePass").value;
+
+    if (pass !== rePass) {
+        alert("Passwords do not match ❌");
+        return false; // prevent form submission
+    } else {
+        alert("Registered successfully ✅");
+        return true; // allow form submission
+    }
 }
 
