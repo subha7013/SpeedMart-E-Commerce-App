@@ -20,7 +20,7 @@
                     <li onclick="showCategories()"><img src="/svgs/category.svg" alt="">Categories</li>
                     <li onclick="showWishlist()"><img src="/svgs/wish.svg" alt=""> Wishlist</li>
                     <li onclick="showCart()"><img src="/svgs/cart.svg" alt=""> Cart</li>
-                    <li><img src="/svgs/profile.svg" alt=""> Profile</li>
+                    <li onclick="showProfile()"><img src="/svgs/profile.svg" alt=""> Profile</li>
                 </ul>
             </div>
         </nav>
@@ -62,6 +62,52 @@
                 <h3 id="cartTotal">Total: Rs 0</h3>
                 <button onclick="placeOrder()">Checkout</button>
             </section>
+            <!-- Profile Page -->
+            <section id="profilePage" style="display:none">
+                <!-- Tab Buttons -->
+                    <button type="button" id="loginBtn" onclick="showLogin()"><b>Login</b></button>
+                    <button type="button" id="signupBtn" onclick="showSignup()"><b>SignUp</b></button>                
+            
+                <!-- Login Form -->
+                 <div class="log">
+                    <form id="loginForm" style="display:none">
+                        <button class="back" onclick="showProf()"><-Back</button>
+                        <div>
+                            E-mail : <input type="email" placeholder="Enter your email" name="loginEmail" id="loginEmail" required>
+                        </div>
+                        <div>
+                            Password : <input type="password" name="loginPassword"  id="loginPass" required>
+                        </div>
+                        <div>
+                            <button type="submit">Login</button>
+                        </div>
+                    </form>
+                 </div>
+                <div class="log">
+                    <!-- Signup Form -->
+                    <form id="signupForm" onsubmit="return signingUp()" style="display:none">
+                        <button class="back" onclick="showProf()"><-Back</button>
+                        <div>
+                            E-mail : <input type="email" placeholder="Enter your email" name="signupEmail" id="signupEmail" required>
+                        </div>
+                        <div>
+                            Mobile Number : <input type="number" name="ph" id="signupPh" required>
+                        </div>
+                        <div>
+                            Set Password : <input type="password" name="signupPass" id="signupPass" required>
+                        </div>
+                        <div style="position: relative;">
+                            Reenter Password : 
+                            <input type="password" name="signupRePass" id="signupRePass" required>
+                        </div>
+                        <div>
+                            <button type="submit">SignUp</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            
     </main>
     <footer id="footer">
         <b>©Subhasish — SpeedMart || Made with ❤️ || 2025</b>
