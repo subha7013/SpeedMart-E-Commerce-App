@@ -62,8 +62,8 @@ function showHome() {
     document.getElementById('cartPage').style.display='none';
     document.getElementById('footer').style.display='flex';
     document.getElementById('profilePage').style.display='none';
+    document.getElementById('home2').style.display='block';
 }
-
 // Show Categories
 function showCategories() {
     showSection('categoriesPage');
@@ -255,7 +255,6 @@ function showSignup() {
 function logingup(){
     alert("Logged-In Successfully!");
 }
-
 function signingUp() {
     let pass = document.getElementById("signupPass").value;
     let rePass = document.getElementById("signupRePass").value;
@@ -268,5 +267,4 @@ function signingUp() {
         return true; // allow form submission
     }
 }
-
 
